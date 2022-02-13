@@ -1,0 +1,40 @@
+#calculator {
+    border: solid black;
+    width: 320px;
+}
+
+#display {
+    height: 120px;
+    background-color: lightslategray;
+    font-size: 52px;
+    line-height: 120px;
+    text-align: end;
+}
+
+
+#rowOne,
+#rowTwo,
+#rowThree,
+#rowFour {
+    display: flex;
+
+}
+
+.number,
+.operator,
+#clear {
+    height: 80px;
+    width: 80px;
+    border: solid white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 32px;
+}
+
+.number {
+    background-color: lightgray;
+}
+
+.operator {
+    background-color: lightsteelblue;
+}
