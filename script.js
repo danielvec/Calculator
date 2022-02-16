@@ -7,6 +7,7 @@ function subtract(a, b) {
 }
 
 function multiply(a, b) {
+    console.log(a * b)
     return a * b;
 }
 
@@ -17,8 +18,8 @@ function divide(a, b) {
 function operate(operator, a, b) {
     if (operator === '+') return add(a, b);
     if (operator === '-') return subtract(a, b);
-    if (operator === '*') return multiply(a, b);
-    if (operator === '/') divide(a, b);
+    if (operator === 'x') return multiply(a, b);
+    if (operator === '/') return divide(a, b);
 }
 let display = document.querySelector("#display");
 let cont = display.textContent;
@@ -33,10 +34,10 @@ function toDisplay() {
 
     document.querySelectorAll(".operator").forEach(operator => {
         operator.addEventListener('click', () => {
-            x = display.textContent;
+            q = display.textContent;
             display.textContent += operator.textContent;
             y = operator.textContent;
-            console.log("step 2", x, y);
+            console.log("step 2", q, y);
             //calculate();
         })
      
@@ -44,10 +45,10 @@ function toDisplay() {
 
     let equals = document.querySelector(".equals")
         equals.addEventListener('click', () => {
-            zArray = display.textContent.split(/[+-]/g);
+            zArray = display.textContent.split(/[\/x+-]/g);
             z = zArray[zArray.length - 1];
-            console.log(zArray, z)
-             display.textContent = operate(y,x,z);
+            console.log(zArray, z, operate('x',2,3))
+             display.textContent = operate(y,q,z);
           })
 
     
