@@ -36,6 +36,11 @@
     background-color: lightgray;
 }
 
-.operator {
+.operator,
+.equals {
     background-color: lightsteelblue;
+}
+
+#clear {
+    background-color: orange;
 }
