@@ -1,9 +1,9 @@
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 }
 
 function subtract(a, b) {
-    return parseInt(a) - parseInt(b);
+    return a - b;
 }
 
 function multiply(a, b) {
@@ -55,7 +55,7 @@ function toDisplay() {
     let equals = document.querySelector(".equals")
         equals.addEventListener('click', () => {
             numArray = display.textContent.split(/[\/x+-]/g);
-            opArray = display.textContent.split(/[\d]/g).filter(Boolean);
+            opArray = display.textContent.split(/[.\d]/g).filter(Boolean);
 
             if (numArray.length < 3) {
              display.textContent = Math.round(operate(opArray[0],numArray[0],numArray[1])*100)/100;
