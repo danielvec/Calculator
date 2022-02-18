@@ -11,7 +11,7 @@
     text-align: end;
 }
 
-
+#rowZero,
 #rowOne,
 #rowTwo,
 #rowThree,
@@ -24,22 +24,28 @@
 .operator,
 .equals,
 #clear,
-.decimal {
+.decimal,
+#delete {
     height: 80px;
     width: 80px;
     border: solid white;
     text-align: center;
     line-height: 80px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
-.number {
+.equals {
+    width: 160px;
+}
+
+.number,
+.decimal {
     background-color: lightgray;
 }
-
-.operator,
-.equals,
-.decimal {
+.equals {
+    background-color: gray;
+}
+.operator {
     background-color: lightsteelblue;
 }
 
