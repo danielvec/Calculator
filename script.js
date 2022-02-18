@@ -34,6 +34,15 @@ function toDisplay() {
           })
     })
 
+    document.querySelectorAll(".decimal").forEach(decimal => {
+        decimal.addEventListener('click', () => {
+            if (display.textContent.length > 7) {
+                display.textContent
+            }
+            else {display.textContent += decimal.textContent;}
+          })
+    })
+
     document.querySelectorAll(".operator").forEach(operator => {
         operator.addEventListener('click', () => {
             if (display.textContent.length > 7) {
@@ -49,15 +58,15 @@ function toDisplay() {
             opArray = display.textContent.split(/[\d]/g).filter(Boolean);
 
             if (numArray.length < 3) {
-             display.textContent = operate(opArray[0],numArray[0],numArray[1]);
+             display.textContent = Math.round(operate(opArray[0],numArray[0],numArray[1])*100)/100;
             }
             else if (numArray.length === 3) {
                 firstResult = operate(opArray[0],numArray[0],numArray[1]);
-                display.textContent = operate(opArray[1],firstResult,numArray[2]);
+                display.textContent = Math.round(operate(opArray[1],firstResult,numArray[2])*100)/100;
             }
             else if (numArray.length === 4) {
                 secondResult = operate(opArray[1],operate(opArray[0],numArray[0],numArray[1]),numArray[2]);
-                display.textContent = operate(opArray[2], secondResult, numArray[3])
+                display.textContent = Math.round(operate(opArray[2], secondResult, numArray[3])*100)/100;
             }
           })
         }

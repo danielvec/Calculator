@@ -23,7 +23,8 @@
 .number,
 .operator,
 .equals,
-#clear {
+#clear,
+.decimal {
     height: 80px;
     width: 80px;
     border: solid white;
@@ -37,7 +38,8 @@
 }
 
 .operator,
-.equals {
+.equals,
+.decimal {
     background-color: lightsteelblue;
 }
 
